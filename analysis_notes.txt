@@ -1,0 +1,39 @@
+The overall average spent is more in the category 'Less than RM20'
+
+Millinials seem to spent more in the category 'Less than RM20' and also seem to be the top spenders in other categories as well.
+
+Females of age 20 - 29 is the highest in both 'Less than RM20' and 'Around RM20 -RM40'
+
+Employed persons seems to be the huge spenders in category 'Around RM20 - RM40', while both students and employed seems to be on par in the 
+category 'Less than RM20'
+
+Very few people seem to prefer the items in the category 'More than RM40'
+
+Based on the data people of age range 30 to 40+ when visited always seems to spend.
+
+Employment sure seems to have an impact on spending where both Males and Females being top in 'Around RM20 - RM40', but student females seem 
+to be the major spenders in the category 'Less than RM20'.
+
+More time spent by the customer in dine in seems to have a relationship towards higher spending.
+
+By looking at the graph, (brand_rating, promotion_rating, ambience_rating, service_rating, choosing_stb_rating) seem to have a right skewed distribution 
+towards 5 star rating.
+
+Price and Wifi rating seem to follow a normal distribution.
+
+Hypothetically there might be a chance for the dine in customers to have a great experience by improving the wifi network. Since wifi_rating curve follows a normal distribution there's a space for improvement and check the results.
+
+And also ultimately the price_rating also seems to coorelate with our overall_spending data where most products from 'Less Than Rm20' to 'Around RM40' seems to have more sales.
+
+Having a membership card seem to have an impact on the 'No Orders' and also in large spending groups (Around RM20 -RM40, More than RM40). So hypothetically there's a significant chance that signing up more customers as members gives makes them devoted.
+
+People in the age range (40 and above) who had a membership always seem to spend in the range (Around RM20 -RM40, More than RM40). 
+
+There's also a staggering result for people in the age group 20 - 39 who had a membership card also seem to spend more.
+
+So improving the wifi and signing up more members could lead to more sales (Hypothetically).
+
+
+
+
+
