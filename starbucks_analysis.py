@@ -41,7 +41,6 @@ plt.show()
 
 fig, (ax1,ax2) = plt.subplots(1,2,figsize=(10,10))
 
-colors =  gender_df[gender_df['Gender'] =='Male']['level_1']
 
 ax1.pie(gender_df[gender_df['Gender'] == 'Male']['avg_spent_per_visit'], labels = gender_df[gender_df['Gender'] =='Male']['level_1'], autopct='%.0f%%')
 ax1.set_title('Male avg spent')
@@ -109,7 +108,6 @@ dine_inzero = df[(df['avg_spent_per_visit'] == 'Zero')]
 
 #rating box plot
 
-sns.box
 
 fig, ax2 = plt.subplots(figsize=(30,20))
 
@@ -142,3 +140,5 @@ mem_df2 = df.groupby(['Gender', 'Age', 'memcard_available'])['avg_spent_per_visi
 sns.barplot(data=mem_df2, x='level_3', y='avg_spent_per_visit', hue=mem_df2[['Age', 'memcard_available']].apply(tuple, axis=1), ax=ax2, order=['Zero', 'Less than RM20', 'Around RM20 - RM40', 'More than RM40'])
 plt.xticks(rotation=45)
 plt.show()
+
+df.describe()
