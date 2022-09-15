@@ -142,3 +142,68 @@ plt.xticks(rotation=45)
 plt.show()
 
 df.describe()
+
+
+#rating across different age groups
+
+rat_df = df.groupby('Age').agg({'brand_rating': np.mean, 'price_rating': np.mean, 'ambience_rating': np.mean, 'promotion_rating': np.mean, 'wifi_rating': np.mean, 'service_rating': np.mean, 'choosing_stb_rating': np.mean })
+
+
+#calculating CLT
+
+sample = df['choosing_stb_rating'].sample(50, replace=True)
+
+clt_data = []
+
+for i in range(10000):
+    clt_data.append(np.mean(df['choosing_stb_rating'].sample(50, replace=True)))
+
+plt.hist(clt_data)
+plt.title('95% C.I for Choosing STB = (3.24, 3.78)')
+
+plt.show()
+
+confi_interval = np.percentile(clt_data, [2.5, 97.5])
+
+print(confi_interval)
+
+
+fig, ax = plt.subplots(3, 3, figsize=(30,20))
+
+all_clt = []
+
+
+
+def calculate_clt(col):
+    print(col)
+    tt = []
+    for i in range(10000):
+        tt.append(np.mean(df[col].sample(50, replace=True)))
+    ci = np.percentile(tt, [2.5, 97.5])
+    return [tt, ci]
+
+
+
+clmns = list(df.columns)
+
+ind = 12
+
+for i in range(0,3):
+    for j in range(0, 3):
+        
+        if ind >= 19:
+            break
+        res = calculate_clt(clmns[ind])
+        
+        
+        
+        ax[i, j].hist(res[0])
+        ax[i, j].set_title(clmns[ind] + ' = '+ str(res[1][0]) + ', ' + str(res[1][1]))
+        ind += 1
+
+
+import pingouin as pg
+
+
+print(pg.ttest(x=df['price_rating'], y=df['wifi_rating']))
+test = df.anova(dv="price_rating", between=["Gender", "Age"]).round(3)

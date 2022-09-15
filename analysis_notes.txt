@@ -36,4 +36,15 @@ So improving the wifi and signing up more members could lead to more sales (Hypo
 
 
 
+Annova Test:
+
+
+The price difference annova test for Gender, Age & Employment doesn't seem to be much significant. 
+
+But Age, Employment groups seem to have almost zero pvalue
+
+visit_time_spent & avg_spent_per_visit groups seem to have very less p value.
+
+
+
 
